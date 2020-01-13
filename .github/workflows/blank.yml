@@ -4,17 +4,17 @@ on:
   pull_request:
     branches: 
       - master
+      - release/*
 
 jobs:
-  build:
+  firebase-deploy:
 
     runs-on: macos-latest
 
     steps:
-    - uses: actions/ionic-deploymentApp@master
-    - name: Install dependencies
-      run: npm install
-    - name: Test package
-      run: ng test
-    - name: Build package
-      run: ng build
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: '10.x'
+      - run: npm install
+      - run: npm run build:prod
