@@ -12,9 +12,4 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2.0.0
-      - uses: actions/setup-node@master
-        with:
-          node-version: '10.x'
-      - run: npm install
-      - run: npm run build
+      - uses: actions/checkout@master
