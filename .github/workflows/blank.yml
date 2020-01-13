@@ -8,10 +8,10 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/ionic-deploymentApp@master
     - name: Install dependencies
       run: npm install
     - name: Test package
