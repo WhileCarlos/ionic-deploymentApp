@@ -8,14 +8,21 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Install Ionic
-        run: npm install ionic
+
       - name: Install Dependencies
         run: npm install
+
+      - name: Setup Ionic
+        uses: coturiv/setup-ionic@v1
+        with: 
+          cordova-version: 8
+
       - name: Build
-        run: npm run android
+        run: |
+          ionic cordova build android --prod
+
       - name: Archive Production Artificat
         uses: actions/upload-artifact@master
         with:
           name: dist
-          path: platforms/app/build/outputs/apk
+          path: platforms/app/build/outputs/apk/debui
