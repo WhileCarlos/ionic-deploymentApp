@@ -9,7 +9,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
       - name: Install Ionic
-        run: npm install ionic -g
+        run: npm install ionic
       - name: Install Dependencies
         run: npm install
       - name: Build
