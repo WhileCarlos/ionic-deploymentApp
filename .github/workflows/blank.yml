@@ -11,7 +11,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: ionic cordova build --release android
+        run: npm run android
       - name: Archive Production Artificat
         uses: actions/upload-artifact@master
         with:
