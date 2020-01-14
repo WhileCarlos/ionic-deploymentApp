@@ -4,7 +4,6 @@ on:
   pull_request:
     branches: 
       - master
-      - release/*
 
 jobs:
   firebase-deploy:
@@ -12,4 +11,4 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@release
