@@ -9,7 +9,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v2
 
-      - name: Upload artifact to Firebase App Distribution
+      - name: Uploads artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1.1.1
         with: 
           appId: ${{ secrets.FIREBASE_APP_ID }}
