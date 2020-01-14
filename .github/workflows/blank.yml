@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
+      - name: Install Ionic
+        run: npm install ionic -g
       - name: Install Dependencies
         run: npm install
       - name: Build
